@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg fixed-top ms-auto">
+	<div class="container-fluid">
+  <!--offcanvas-trigger-->
+	  <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+	  <span class="navbar-toggler-icon" data-bs-target="#navbarTogglerDemo01">
+	  <i class="bi bi-list text-white"></i>
+	  </span>
+	</button>
+
+	<!--end of offcanvas-trigger-->
+    <a class="navbar-brand fw-bold fs-2 text-uppercase text-white fst-italic me-auto" href="#">Stylish</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+		<i class="bi bi-three-dots text-white"></i>
+	  </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex ms-auto" role="search">
+         <div class="input-group my-3 my-lg-0">
+		  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+		  <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+		</div>
+      </form>
+      
+	  <ul class="navbar-nav navbar-nav-scroll mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+            <i class="bi bi-person-fill text-white fs-3"></i>
+          </a>
+ 
+        </li>
+		<li class="nav-item">
+          <a class="nav-link circle" aria-current="page" href="#">
+			<i class="bi bi-chat-left-dots-fill text-white fs-3"></i>
+		  </a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link circle" aria-current="page" href="#">
+			<i class="bi bi-bell-fill text-white fs-3"></i>
+		  </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--offcanvas menu-->
+
+
+<div class="offcanvas offcanvas-start sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+   <nav class="navbar">
+	<ul class="navbar-nav">
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 active  text-uppercase fw-semibold ">
+			<span class="me-2"><i class="bi bi-speedometer2 text-dark"></i></span>
+			<span class="text-dark">Dashboard</span>
+			</a>
+		</li>
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase  fw-semibold">
+			<span class="me-2"><i class="bi bi-graph-up-arrow text-dark"></i></span>
+			<span class="text-dark">Charts</span>
+			</a>
+		</li>
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase fw-semibold">
+			<span class="me-2"><i class="bi bi-table text-dark"></i></span>
+			<span class="text-dark">Tables</span>
+			</a>
+		</li>
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase fw-semibold">
+			<span class="me-2"><i class="bi bi-info-square text-dark"></i></span>
+			<span class="text-dark">Forms</span>
+			</a>
+		</li>
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase fw-semibold">
+			<span class="me-2"><i class="bi bi-geo-alt-fill text-dark"></i></i></span>
+			<span class="text-dark">Map</span>
+			</a>
+		</li>
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase fw-semibold">
+			<span class="me-2"><i class="bi bi-calendar3 text-dark"></i></span>
+			<span class="text-dark">Calendar</span>
+			</a>
+		</li>
+		<li  class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase fw-semibold">
+			<span class="me-2"><i class="bi bi-file-earmark-break-fill text-dark"></i></span>
+			<span class="text-dark">Pages</span>
+			</a>
+		</li>
+		<li class="py-2">
+			<a href="#"  class="nav-link px-4 text-uppercase fw-semibold">
+			<span class="me-2"><i class="bi bi-laptop text-dark"></i></span>
+			<span class="text-dark">Ui Elements</span>
+			</a>
+		</li>
+	</ul>
+   </nav>
+  </div>
+</div>
+
+<!--end of offcanvas menu-->
+<!-- main -->
+<main class="mt-5 pt-3 bg-light">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 fs-3 py-5 text-secondary fw-bold">OVERVIEW</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="card  mb-3 card-1">
+				  <div class="card-header">
+					<i class="bi bi-person fs-1 text-white"></i>
+				  </div>
+				  <div class="card-body">
+					<h5 class="fs-3 text-white">9099</h5>
+					<p class="card-text text-white">members online</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="card  mb-3 card-1">
+				  <div class="card-header">
+					<i class="bi bi-cart fs-1 text-white"></i>
+				  </div>
+				  <div class="card-body">
+					<h5 class="fs-3 text-white">245,699</h5>
+					<p class="card-text text-white">items solids</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="card  mb-3 card-1">
+				  <div class="card-header">
+					<i class="bi bi-clipboard-data fs-1 text-white"></i>
+				  </div>
+				  <div class="card-body">
+					<h5 class="fs-3 text-white">1045</h5>
+					<p class="card-text text-white">this week</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="card  mb-3 card-1">
+				  <div class="card-header">
+					<i class="bi bi-currency-dollar fs-1 text-white"></i>
+				  </div>
+				  <div class="card-body">
+					<h5 class="fs-3 text-white">1,068,456</h5>
+					<p class="card-text text-white">total earnings</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<div class="card chart-card">
+					<div class="chartBox">
+						<h5>Weekly sales</h5>
+						<canvas id="myChart" style="width:350px; height:350px;"></canvas>
+					 </div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="card chart-card">
+					<div class="chartBox doughnut-chart">
+						<h5>Top selling products</h5>
+						<canvas id="myChartDoughnut" style="width:350px; height:350px;"></canvas>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid my-5">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="data-table table-responsive">
+					<table class="table table-striped table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col">Date</th>
+						  <th scope="col">Order ID</th>
+						  <th scope="col">Catagory</th>
+						  <th scope="col">Prices</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						<tr>
+						  <td>2022-09-29</td>
+						  <td>100445</td>
+						  <td>Manwear</td>
+						  <td>$99.00</td>
+						</tr>
+						
+					  </tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="card mx-auto" style="width:350px;" >
+					<div class=" card-header message-header py-3">
+						<i class="bi bi-chat-left-dots"></i>
+						<h3 class="text-white fw-bold">New Message</h3>
+					</div>
+					<div class="card-body">
+						<div class="message-inner my-2">
+							<div class="message-img me-2">
+								<img src="images/lady.png">
+							</div>
+							<div class="message-text">
+								<h5 class="text-start my-0 text-dark fw-semibold">Jhon Doe</h5>
+								<p class="text-start text-muted fs-6">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="message-time">
+								<span class="time fs-6">11:00 PM</span>
+							</div>
+						</div>
+						<div class="message-inner my-2">
+							<div class="message-img me-2">
+								<img src="images/lady-1.png">
+							</div>
+							<div class="message-text">
+								<h5 class="text-start my-0 text-dark fw-semibold">Jhon Doe</h5>
+								<p class="text-start text-muted fs-6">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="message-time">
+								<span class="time fs-6">11:00 PM</span>
+							</div>
+						</div>
+						<div class="message-inner my-2">
+							<div class="message-img me-2">
+								<img src="images/man-1.png">
+							</div>
+							<div class="message-text">
+								<h5 class="text-start my-0 text-dark fw-semibold">Jhon Doe</h5>
+								<p class="text-start text-muted fs-6">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="message-time">
+								<span class="time fs-6">11:00 PM</span>
+							</div>
+						</div>
+						<div class="message-inner my-2">
+							<div class="message-img me-2">
+								<img src="images/man-2.png">
+							</div>
+							<div class="message-text">
+								<h5 class="text-start my-0 text-dark fw-semibold">Jhon Doe</h5>
+								<p class="text-start text-muted fs-6">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="message-time">
+								<span class="time fs-6">11:00 PM</span>
+							</div>
+						</div>
+						<div class="message-inner my-2">
+							<div class="message-img me-2">
+								<img src="images/man-3.png">
+							</div>
+							<div class="message-text">
+								<h5 class="text-start my-0 text-dark fw-semibold">Jhon Doe</h5>
+								<p class="text-start text-muted fs-6">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="message-time">
+								<span class="time fs-6">11:00 PM</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<!--end of main-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	
+<script src="script.js"></script>
+
+</body>
+</html>
